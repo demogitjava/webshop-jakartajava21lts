@@ -1,7 +1,6 @@
 package de.jgsoftware.webshop.config;
 
 
-//import javax.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityManagerFactory;
 
 import com.zaxxer.hikari.HikariConfig;
@@ -25,7 +24,6 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 
 @Configuration
-//@EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "de.jgsoftware.webshop.dao.interfaces.demodb",
         entityManagerFactoryRef = "entityManagerFactory",
         transactionManagerRef = "transactionManager")
