@@ -1,4 +1,7 @@
-package de.jgsoftware.webshop.demowebshop;
+package de.jgsoftware.webshop;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 
 /**
  *
