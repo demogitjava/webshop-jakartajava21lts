@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>de.jgsoftware.landingpage</groupId>
-    <artifactId>landingpage</artifactId>
+    <groupId>de.jgsoftware.webshop</groupId>
+    <artifactId>webshop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>landingpage</name>
-    <description>Demo Landingpage</description>
+    <name>webshop</name>
+    <description>Demo Webshop</description>
     <packaging>jar</packaging>
 
 
@@ -26,7 +26,6 @@
     
         
         <maven.compiler.release>21</maven.compiler.release>
-	<jakartaee-api.version>10.0.0</jakartaee-api.version>
 	<compiler-plugin.version>3.11.0</compiler-plugin.version>
     </properties>
 
@@ -81,7 +80,7 @@
                         <configuration>
 
                             <classifier>spring-boot</classifier>
-                            <mainClass>de.jgsoftware.landingpage.DemoLandingPage</mainClass>
+                            <mainClass>de.jgsoftware.webshop.WebshopApplication</mainClass>
                         </configuration>
                     </execution>
                 </executions>
