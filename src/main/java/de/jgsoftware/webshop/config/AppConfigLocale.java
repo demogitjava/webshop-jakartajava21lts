@@ -27,19 +27,14 @@ public class AppConfigLocale extends WebMvcConfigurerAdapter
     @Bean
     public LocaleChangeInterceptor localeChangeInterceptor()
     {
-
-
         LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
         lci.setParamName("language");
-        //return lci;
-
         return lci;
     }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeChangeInterceptor());
-        //registry.addInterceptor(servletInterceptor_lang);
     }
 
 
