@@ -12,8 +12,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class MvcConfig implements WebMvcConfigurer
 {
 
-    @Autowired
-    public AppConfigLocale appConfigLocale;
+   // @Autowired
+   // public AppConfigLocale appConfigLocale;
 
 
     public void addViewControllers(ViewControllerRegistry registry)
@@ -51,10 +51,10 @@ public class MvcConfig implements WebMvcConfigurer
         registry.addViewController("/m_tr").setViewName("m_tr");
     }
 
-    public AppConfigLocale getAppConfigLocale() {
-        return appConfigLocale;
-    }
-    public void setAppConfigLocale(AppConfigLocale appConfigLocale) {
-        this.appConfigLocale = appConfigLocale;
-    }
+    //public AppConfigLocale getAppConfigLocale() {
+     //   return appConfigLocale;
+    //}
+    //public void setAppConfigLocale(AppConfigLocale appConfigLocale) {
+     //   this.appConfigLocale = appConfigLocale;
+    //}
 }

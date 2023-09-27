@@ -30,9 +30,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class DemoDBConfig extends HikariConfig
 {
 
-    @Autowired
-    @Qualifier(value = "defaultJdbcTemplate")
-    JdbcTemplate jtm;
+    //@Autowired
+    //@Qualifier(value = "defaultJdbcTemplate")
+    //org.springframework.jdbc.core.JdbcTemplate jtm;
 
     public DemoDBConfig()
     {
@@ -69,17 +69,17 @@ public class DemoDBConfig extends HikariConfig
         return new JpaTransactionManager(entityManagerFactory);
     }
 
-    @Primary
-    @Bean(name = "defaultJdbcTemplate")
-    public JdbcTemplate jdbcTemplate(@Qualifier("dataSource") DataSource demodb)
-    {
+    //@Primary
+    //@Bean(name = "defaultJdbcTemplate")
+    //public JdbcTemplate jdbcTemplate(@Qualifier("dataSource") DataSource demodb)
+    //{
     	
     	/*
     	 *  run manuel query 
     	 *  JDBC Template - jtm
     	 */
-        jtm = new JdbcTemplate();
-        jtm.setDataSource(demodb);
-        return jtm;
-    }
+      //  jtm = new org.springframework.jdbc.core.JdbcTemplate();
+       // jtm.setDataSource(demodb);
+      //  return jtm;
+   // }
 }
