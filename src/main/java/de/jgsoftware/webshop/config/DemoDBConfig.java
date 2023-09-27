@@ -40,8 +40,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-//@EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "de.jgsoftware.webshop.dao.interfaces.demodb",
+@EnableJpaRepositories(basePackages = "de.jgsoftware.webshop.dao.interfaces.demodb.*",
         entityManagerFactoryRef = "entityManagerFactory",
         transactionManagerRef = "transactionManager")
 public class DemoDBConfig extends HikariConfig
