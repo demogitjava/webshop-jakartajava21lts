@@ -1,4 +1,4 @@
-package de.jgsoftware.webshop.dao.interfaces;
+package de.jgsoftware.webshop.dao.interfaces.demodb;
 
 import de.jgsoftware.webshop.model.demodb.Useragent;
 import org.springframework.data.jpa.repository.JpaRepository;
