@@ -1,14 +1,9 @@
 package de.jgsoftware.webshop.config;
 
-import java.sql.SQLException;
 import java.util.HashMap;
-
 import jakarta.persistence.EntityManagerFactory;
-
 import javax.sql.DataSource;
-
 import com.zaxxer.hikari.HikariConfig;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -23,7 +18,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
-//@EnableTransactionManagement
+
 @EnableJpaRepositories(basePackages = "de.jgsoftware.webshop.dao.interfaces.mawi",
         entityManagerFactoryRef = "mawiEntityManagerFactory",
         transactionManagerRef = "mawiTransactionManager")
