@@ -17,11 +17,13 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 
 @Configuration
-@EnableJpaRepositories(basePackages = "de.jgsoftware.webshop.dao.interfaces.demodb.*",
+@EnableTransactionManagement
+@EnableJpaRepositories(basePackages = "de.jgsoftware.webshop.dao.interfaces.demodb",
         entityManagerFactoryRef = "entityManagerFactory",
         transactionManagerRef = "transactionManager")
 public class DemoDBConfig extends HikariConfig
@@ -42,7 +44,8 @@ public class DemoDBConfig extends HikariConfig
     @Bean(name = "dataSource")
     @Qualifier("demodb")
     @ConfigurationProperties(prefix = "spring.demodb.datasource")
-    public DataSource dataSource() {
+    public DataSource dataSource() 
+    {
         return DataSourceBuilder.create().build();
     }
 
@@ -54,6 +57,7 @@ public class DemoDBConfig extends HikariConfig
         HashMap<String, Object> properties = new HashMap<>();
 
         properties.put("hibernate.dialect", "org.hibernate.dialect.DerbyDialect");
+        
         return builder.dataSource(dataSource).properties(properties)
                 .packages("de.jgsoftware.webshop.model.demodb").persistenceUnit("derbydemodb").build();
 

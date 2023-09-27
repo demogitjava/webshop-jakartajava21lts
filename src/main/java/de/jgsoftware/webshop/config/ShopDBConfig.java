@@ -22,7 +22,7 @@ import java.util.HashMap;
 
 
 @Configuration
-//@EnableTransactionManagement
+@EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "de.jgsoftware.webshop.dao.interfaces.shopdb",
         entityManagerFactoryRef = "shopEntityManagerFactory",
         transactionManagerRef = "shopTransactionManager")
