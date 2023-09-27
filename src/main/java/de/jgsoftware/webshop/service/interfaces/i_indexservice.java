@@ -1,5 +1,7 @@
 package de.jgsoftware.webshop.service.interfaces;
 
+import de.jgsoftware.webshop.dao.interfaces.i_daoindex;
+
 /**
  *
  * @author hoscho
@@ -7,5 +9,6 @@ package de.jgsoftware.webshop.service.interfaces;
 
 public interface i_indexservice 
 {
-    
+	i_daoindex getIdaoindex();
+	void setIdaoindex(i_daoindex idaoindex);
 }
