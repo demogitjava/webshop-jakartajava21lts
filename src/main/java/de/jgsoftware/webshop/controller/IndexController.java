@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 import de.jgsoftware.webshop.service.interfaces.i_indexservice;
+
+
 /**
  *
  * @author hoscho
@@ -19,6 +21,8 @@ public class IndexController implements i_indexcontroller {
 	i_indexservice interfaceindexservice;
 	
 	
+	
+	
     ModelAndView mv;
     
     
@@ -26,7 +30,12 @@ public class IndexController implements i_indexcontroller {
     @Override
     public ModelAndView index() 
     {
+    	
+    	
         mv = new ModelAndView("index");
+        Long usercountdemo = interfaceindexservice.getuseragentcount();
+        mv.addObject("Usercount", interfaceindexservice.getuseragentcount());
+        
         return null;
     }
     

@@ -11,4 +11,12 @@ public interface i_indexservice
 {
 	i_daoindex getIdaoindex();
 	void setIdaoindex(i_daoindex idaoindex);
+	
+	
+	// demodb
+	/*
+	 *  get count of table useragent 
+	 *  demodb
+	 */
+	Long getuseragentcount();
 }
