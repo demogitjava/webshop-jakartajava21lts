@@ -20,12 +20,7 @@ public class DemoWebshop {
 
     public static void main(String[] args) {
      
-       SpringApplicationBuilder builder = new SpringApplicationBuilder(DemoWebshop.class);
-		builder
-				// none
-				// reactive
-				// servlet
-				.web(WebApplicationType.SERVLET).headless(true).run();
+        SpringApplication.run(DemoWebshop.class, args);
 
     }
 }
