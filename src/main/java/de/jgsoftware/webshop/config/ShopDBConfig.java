@@ -28,9 +28,9 @@ import java.util.HashMap;
         transactionManagerRef = "shopTransactionManager")
 public class ShopDBConfig extends HikariConfig
 {
-    @Autowired
-    @Qualifier(value = "shopJdbcTemplate")
-    JdbcTemplate jtm2;
+    //@Autowired
+    //@Qualifier(value = "shopJdbcTemplate")
+    //JdbcTemplate jtm2;
 
 
 
@@ -62,7 +62,7 @@ public class ShopDBConfig extends HikariConfig
 
         properties.put("hibernate.dialect", "org.hibernate.dialect.DerbyDialect");
         return builder.dataSource(dataSource2).properties(properties)
-                .packages("de.jgsoftware.landingpage.model.jpa.shopdb").persistenceUnit("derbyshopdb").build();
+                .packages("de.jgsoftware.webshop.model.shopdb").persistenceUnit("derbyshopdb").build();
     }
 
     @Bean(name = "shopTransactionManager")

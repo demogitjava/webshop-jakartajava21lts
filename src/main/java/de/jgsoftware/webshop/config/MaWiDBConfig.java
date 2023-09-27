@@ -24,9 +24,9 @@ import org.springframework.transaction.PlatformTransactionManager;
         transactionManagerRef = "mawiTransactionManager")
 public class MaWiDBConfig extends HikariConfig
 {
-    @Autowired
-    @Qualifier(value = "mawiJdbcTemplate")
-    JdbcTemplate jtm1;
+    //@Autowired
+    //@Qualifier(value = "mawiJdbcTemplate")
+    //JdbcTemplate jtm1;
 
 
 
@@ -58,7 +58,7 @@ public class MaWiDBConfig extends HikariConfig
 
         properties.put("hibernate.dialect", "org.hibernate.dialect.DerbyDialect");
         return builder.dataSource(dataSource1).properties(properties)
-                .packages("de.jgsoftware.landingpage.model.jpa.mawi").persistenceUnit("derbymawi").build();
+                .packages("de.jgsoftware.webshop.model.mawi").persistenceUnit("derbymawi").build();
     }
 
     @Bean(name = "mawiTransactionManager")
@@ -67,12 +67,12 @@ public class MaWiDBConfig extends HikariConfig
         return new JpaTransactionManager(mawiEntityManagerFactory);
     }
 
-    @Bean(name = "mawiJdbcTemplate")
-    public JdbcTemplate jdbcTemplate(@Qualifier("ds2") DataSource dataSource1)
-    {
+    //@Bean(name = "mawiJdbcTemplate")
+    //public JdbcTemplate jdbcTemplate(@Qualifier("ds2") DataSource dataSource1)
+    //{
 
-        return new JdbcTemplate(dataSource1);
-    }
+       // return new JdbcTemplate(dataSource1);
+    //}
 
 
 
