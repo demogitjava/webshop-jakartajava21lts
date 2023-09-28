@@ -31,9 +31,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
         transactionManagerRef = "mawiTransactionManager")
 public class MaWiDBConfig extends HikariConfig
 {
-    @Autowired
-    @Qualifier(value = "mawiJdbcTemplate")
-    JdbcTemplate jtm1;
+    //@Autowired
+    //@Qualifier(value = "mawiJdbcTemplate")
+    //JdbcTemplate jtm1;
 
 
 
@@ -74,12 +74,12 @@ public class MaWiDBConfig extends HikariConfig
         return new JpaTransactionManager(mawiEntityManagerFactory);
     }
 
-    @Bean(name = "mawiJdbcTemplate")
-    public JdbcTemplate jdbcTemplate(@Qualifier("ds2") DataSource dataSource1)
-    {
+    //@Bean(name = "mawiJdbcTemplate")
+    //public JdbcTemplate jdbcTemplate(@Qualifier("ds2") DataSource dataSource1)
+   // {
 
-        return new JdbcTemplate(dataSource1);
-    }
+       // return new JdbcTemplate(dataSource1);
+   // }
 
 
 

@@ -14,8 +14,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import javax.sql.DataSource;
 
-import static org.springframework.security.config.Customizer.withDefaults;
-
 /**
  *
  * @author hoscho
@@ -39,14 +37,14 @@ public class SpringSecurityConfiguration extends WebMvcConfigurerAdapter {
 
 	}
 
-	@Bean
-	public BCryptPasswordEncoder passwordEncoder() {
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 
-	protected void configure(HttpSecurity http) throws Exception {
+	//protected void configure(HttpSecurity http) throws Exception {
 
       
-	}
+	//}
 
 }

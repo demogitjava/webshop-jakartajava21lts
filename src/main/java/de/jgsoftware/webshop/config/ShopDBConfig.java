@@ -30,9 +30,9 @@ import org.springframework.context.annotation.PropertySource;
         transactionManagerRef = "shopTransactionManager")
 public class ShopDBConfig extends HikariConfig
 {
-    @Autowired
-    @Qualifier(value = "shopJdbcTemplate")
-    JdbcTemplate jtm2;
+   // @Autowired
+    //@Qualifier(value = "shopJdbcTemplate")
+    //JdbcTemplate jtm2;
 
 
 
@@ -73,12 +73,12 @@ public class ShopDBConfig extends HikariConfig
         return new JpaTransactionManager(shopEntityManagerFactory);
     }
 
-    @Bean(name = "shopJdbcTemplate")
-    public JdbcTemplate jdbcTemplate(@Qualifier("ds3") DataSource dataSource2)
-    {
+   // @Bean(name = "shopJdbcTemplate")
+   // public JdbcTemplate jdbcTemplate(@Qualifier("ds3") DataSource dataSource2)
+   // {
 
-        return new JdbcTemplate(dataSource2);
-    }
+     //   return new JdbcTemplate(dataSource2);
+   // }
 
     public DataSource getDataSource2() {
         return dataSource2;
