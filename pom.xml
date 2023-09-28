@@ -120,12 +120,7 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
         
-        <dependency>
-            <groupId>com.zaxxer</groupId>
-            <artifactId>HikariCP</artifactId>
-            <version>4.0.3</version>
-            <type>jar</type>
-        </dependency>
+       
          <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-jdk14 -->
 		<dependency>
 		    <groupId>org.slf4j</groupId>
