@@ -4,79 +4,75 @@
         derby database
     -->
     <persistence-unit name="derbydemodb">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <provider>org.hibernate.HibernatePersistenceProvider</provider>
 
 
-        <class>de.jgsoftware.landingpage.model.jpa.demodb.Desktoplayout</class>
-        <class>de.jgsoftware.landingpage.model.jpa.demodb.Kundenstamm</class>
-        <class>de.jgsoftware.landingpage.model.jpa.demodb.Reports</class>
-        <class>de.jgsoftware.landingpage.model.jpa.demodb.Sprachen</class>
-        <class>de.jgsoftware.landingpage.model.jpa.demodb.Useragent</class>
-        <class>de.jgsoftware.landingpage.model.jpa.demodb.Userdata</class>
-        <class>de.jgsoftware.landingpage.model.jpa.demodb.Userdetail</class>
-        <class>de.jgsoftware.landingpage.model.jpa.demodb.Users</class>
-        <class>de.jgsoftware.landingpage.model.jpa.demodb.Webtextlayout</class>
-        <class>de.jgsoftware.landingpage.model.jpa.demodb.Yourcompanydata</class>
+        <class>de.jgsoftware.webshop.model.demodb.Desktoplayout</class>
+        <class>de.jgsoftware.webshop.model.demodb.Kundenstamm</class>
+        <class>de.jgsoftware.webshop.model.demodb.Reports</class>
+        <class>de.jgsoftware.webshop.model.demodb.Sprachen</class>
+        <class>de.jgsoftware.webshop.model.demodb.Useragent</class>
+        <class>de.jgsoftware.webshop.model.demodb.Userdata</class>
+        <class>de.jgsoftware.webshop.model.demodb.Userdetail</class>
+        <class>de.jgsoftware.webshop.model.demodb.Users</class>
+        <class>de.jgsoftware.webshop.model.demodb.Webtextlayout</class>
+        <class>de.jgsoftware.webshop.model.demodb.Yourcompanydata</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyTenFiveDialect" />
             <property name="show_sql" value="true" />
-            <property name="hibernate.connection.url" value="jdbc:derby://localhost:1527/derbydemodb"/>
+            <property name="hibernate.connection.url" value="jdbc:derby://172.17.0.2:1527/derbydemodb"/>
             <property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.ClientDriver"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="jj78mvpr52k1"/>
         </properties>
     </persistence-unit>
     <persistence-unit name="derbymawi">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>de.jgsoftware.landingpage.model.jpa.mawi.Artikelstamm</class>
-        <class>de.jgsoftware.landingpage.model.jpa.mawi.Buchungsarten</class>
-        <class>de.jgsoftware.landingpage.model.jpa.mawi.Buchungsdaten</class>
-        <class>de.jgsoftware.landingpage.model.jpa.mawi.Belegarten</class>
+        <provider>org.hibernate.HibernatePersistenceProvider</provider>
+        <class>de.jgsoftware.webshop.model.mawi.Artikelstamm</class>
+        <class>de.jgsoftware.webshop.model.mawi.Buchungsarten</class>
+        <class>de.jgsoftware.webshop.model.mawi.Buchungsdaten</class>
+        <class>de.jgsoftware.webshop.model.mawi.Belegarten</class>
 
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyTenFiveDialect" />
             <property name="show_sql" value="true" />
-            <property name="hibernate.connection.url" value="jdbc:derby://localhost:1527/derbymawi"/>
+            <property name="hibernate.connection.url" value="jdbc:derby://172.17.0.2:1527/derbymawi"/>
             <property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.ClientDriver"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="jj78mvpr52k1"/>
         </properties>
     </persistence-unit>
     <persistence-unit name="derbyshopdb">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <provider>org.hibernate.HibernatePersistenceProvider</provider>
 
 
-        <class>de.jgsoftware.landingpage.model.jpa.shopdb.Authorities</class>
-        <class>de.jgsoftware.landingpage.model.jpa.shopdb.BootstrapComponents</class>
-        <class>de.jgsoftware.landingpage.model.jpa.shopdb.EngProduct</class>
+        <class>de.jgsoftware.webshop.model.shopdb.Authorities</class>
+        <class>de.jgsoftware.webshop.model.shopdb.BootstrapComponents</class>
+        <class>de.jgsoftware.webshop.model.shopdb.EngProduct</class>
 
-        <class>de.jgsoftware.landingpage.model.jpa.shopdb.Products</class>
-        <class>de.jgsoftware.landingpage.model.jpa.shopdb.ProductCheckOutText</class>
-        <class>de.jgsoftware.landingpage.model.jpa.shopdb.Shoppingcart</class>
-        <class>de.jgsoftware.landingpage.model.jpa.shopdb.Sprachen</class>
+        <class>de.jgsoftware.webshop.model.shopdb.Products</class>
+        <class>de.jgsoftware.webshop.model.shopdb.ProductCheckOutText</class>
+        <class>de.jgsoftware.webshop.model.shopdb.Shoppingcart</class>
+        <class>de.jgsoftware.webshop.model.shopdb.Sprachen</class>
 
-        <class>de.jgsoftware.landingpage.model.jpa.shopdb.Users</class>
-        <class>de.jgsoftware.landingpage.model.jpa.shopdb.Webtextlayout</class>
-        <class>de.jgsoftware.landingpage.model.jpa.shopdb.SpringSession</class>
-        <class>de.jgsoftware.landingpage.model.jpa.shopdb.SpringSessionAttributes</class>
-
-
-        <class>de.jgsoftware.landingpage.model.m_bootstrap_components</class>
-        <class>de.jgsoftware.landingpage.model.useragent</class>
-        <class>de.jgsoftware.landingpage.model.m_webtextlayout</class>
-        <class>org.springframework.data.jpa.domain.AbstractPersistable</class>
-        <class>org.springframework.data.jpa.domain.AbstractAuditable</class>
+        <class>de.jgsoftware.webshop.model.shopdb.Users</class>
+        <class>de.jgsoftware.webshop.model.shopdb.Webtextlayout</class>
+       
+        <class>de.jgsoftware.webshop.model.m_bootstrap_components</class>
+        <class>de.jgsoftware.webshop.model.useragent</class>
+        <class>de.jgsoftware.webshop.model.m_webtextlayout</class>
+     
 
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyTenFiveDialect" />
             <property name="show_sql" value="true" />
-            <property name="hibernate.connection.url" value="jdbc:derby://localhost:1527/derbyshopdb"/>
+            <property name="hibernate.connection.url" value="jdbc:derby://172.17.0.2:1527/derbyshopdb"/>
             <property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.ClientDriver"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="jj78mvpr52k1"/>
