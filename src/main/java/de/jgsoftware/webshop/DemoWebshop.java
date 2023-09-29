@@ -14,8 +14,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 @SpringBootApplication
-//@EnableJpaRepositories(basePackages = "de.jgsoftware.landingpage.dao.interfaces.*") 
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackages = "de.jgsoftware.landingpage.dao.interfaces") 
+
 public class DemoWebshop {
 
     public static void main(String[] args) {
