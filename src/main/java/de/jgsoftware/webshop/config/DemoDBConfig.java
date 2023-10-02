@@ -5,7 +5,11 @@ package de.jgsoftware.webshop.config;
 import java.util.HashMap;
 
 import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.zaxxer.hikari.HikariConfig;
 
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -37,18 +41,22 @@ import javax.sql.DataSource;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 @Configuration
 //@EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "de.jgsoftware.webshop.dao.interfaces.demodb",
         entityManagerFactoryRef = "entityManagerFactory",
         transactionManagerRef = "transactionManager")
+@ConfigurationProperties(prefix = "spring.demodb.datasource")
 public class DemoDBConfig extends HikariConfig
 {
 
     //@Autowired
     //@Qualifier(value = "defaultJdbcTemplate")
     //JdbcTemplate jtm;
+	
+
 
     public DemoDBConfig()
     {
@@ -61,19 +69,26 @@ public class DemoDBConfig extends HikariConfig
     @Bean(name = "dataSource")
     @Qualifier("demodb")
     @ConfigurationProperties(prefix = "spring.demodb.datasource")
-    public DataSource dataSource() {
+    public DataSource dataSource() 
+    {
         return DataSourceBuilder.create().build();
     }
 
 
     @Primary
     @Bean(name = "entityManagerFactory")
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(EntityManagerFactoryBuilder builder,
-                                                                       @Qualifier("demodb") DataSource dataSource) {
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory
+    (
+    		EntityManagerFactoryBuilder builder,
+    		@Qualifier("demodb") DataSource dataSource
+    ) 
+    {
         HashMap<String, Object> properties = new HashMap<>();
 
         properties.put("hibernate.dialect", "org.hibernate.dialect.DerbyDialect");
-        return builder.dataSource(dataSource).properties(properties)
+        
+        return builder.dataSource(dataSource)
+        		//.properties(properties)
                 .packages("de.jgsoftware.webshop.demodb").persistenceUnit("derbydemodb").build();
 
     }
