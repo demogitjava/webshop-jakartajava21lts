@@ -4,10 +4,12 @@ package de.jgsoftware.webshop.config;
 
 import java.util.HashMap;
 
+import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Persistence;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.zaxxer.hikari.HikariConfig;
@@ -57,10 +59,22 @@ public class DemoDBConfig extends HikariConfig
     //JdbcTemplate jtm;
 	
 
+    private static EntityManagerFactory entityManagerFactory;
+    private static EntityManager em;
 
     public DemoDBConfig()
     {
         //startH2Server();
+    	
+    	  if (entityManagerFactory == null) {
+    		  entityManagerFactory = Persistence.createEntityManagerFactory("derbydemodb");
+          }
+
+          if (em == null || !em.isOpen()) {
+              em = entityManagerFactory.createEntityManager();
+          }
+
+         
     }
 
  
@@ -88,7 +102,7 @@ public class DemoDBConfig extends HikariConfig
         properties.put("hibernate.dialect", "org.hibernate.dialect.DerbyDialect");
         
         return builder.dataSource(dataSource)
-        		//.properties(properties)
+        		.properties(properties)
                 .packages("de.jgsoftware.webshop.demodb").persistenceUnit("derbydemodb").build();
 
     }
