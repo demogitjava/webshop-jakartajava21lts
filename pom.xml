@@ -155,18 +155,21 @@
             <artifactId>jakarta.persistence</artifactId>
             <version>2.2.3</version>
         </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>2.7.12</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-runtime</artifactId>
-            <scope>provided</scope>
-        </dependency>
       
+       
+
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core-jakarta</artifactId>
+    <version>6.3.1.Final</version>
+</dependency>
+<dependency>
+    <groupId>org.glassfish.jaxb</groupId>
+    <artifactId>jaxb-runtime</artifactId>
+    <version>3.0.0</version>
+</dependency>
+
+
     </dependencies>
 
     <build>
@@ -182,7 +185,7 @@
                           <tomeeVersion>1.7.1</tomeeVersion>
                           <tomeeClassifier>plus</tomeeClassifier>
                         
-                          <tomeeHttpPort>80</tomeeHttpPort>
+                          <tomeeHttpPort>443</tomeeHttpPort>
                          
                         </configuration>
                     </plugin>
@@ -203,7 +206,7 @@
                         <configuration>
 
                             <classifier>spring-boot</classifier>
-                            <mainClass>de.jgsoftware.landingpage.DemoLandingPage</mainClass>
+                            <mainClass>de.jgsoftware.webshop.DemoWebshop</mainClass>
                         </configuration>
                     </execution>
                 </executions>
