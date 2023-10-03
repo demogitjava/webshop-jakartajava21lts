@@ -13,6 +13,7 @@ import jakarta.persistence.Persistence;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -51,6 +52,7 @@ import java.util.UUID;
         entityManagerFactoryRef = "entityManagerFactory",
         transactionManagerRef = "transactionManager")
 @ConfigurationProperties(prefix = "spring.demodb.datasource")
+
 public class DemoDBConfig extends HikariConfig
 {
 
