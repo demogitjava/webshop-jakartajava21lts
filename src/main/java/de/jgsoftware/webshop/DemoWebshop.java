@@ -17,7 +17,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EnableAutoConfiguration(
 exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
-
 public class DemoWebshop {
 
     public static void main(String[] args) 
