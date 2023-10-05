@@ -1,0 +1,12 @@
+# Demo Webshop with Spring Boot + Thymeleaf + Bootstrap/Bootflat ui kit
+
+
+jdbc connection -> Hibernate Jakarta
+
+The default Database is Apache Derby Network Server - 10.16.1.1
+
+the used ide is Spring Tools 4 
+
+alternative you can use the docker image on 
+https://hub.docker.com/r/jgsoftwares/derbydbjava21
+
