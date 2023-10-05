@@ -24,8 +24,12 @@ public class DemoWebshop {
     public static void main(String[] args) 
     {
      
+    	/*
+    	 *  derby db
+    	 */
         Derbydb_Hiberante derbydb = new Derbydb_Hiberante();
         derbydb.openSession();
+        
         SpringApplication.run(DemoWebshop.class, args);
 
     }
