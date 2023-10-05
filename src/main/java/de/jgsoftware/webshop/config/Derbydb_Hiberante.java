@@ -15,63 +15,57 @@ import jakarta.persistence.criteria.CriteriaQuery;
 import java.util.Properties;
 
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+
+
 @Component
-public class Derbydb_Hiberante {
+public class Derbydb_Hiberante 
+{
 
-    SessionFactory sessionFactory;
-    Session session;
-    
-    Transaction tx;
+        public Derbydb_Hiberante()
+        {
 
-    public Session getSession() {
-        this.session = createAndGetLocalSessionFactoryBean().getCurrentSession();
-        return createAndGetLocalSessionFactoryBean().openSession();
-    }
 
-    SessionFactory createAndGetLocalSessionFactoryBean() {
-        if (this.sessionFactory == null) {
-            try {
-                Configuration configuration = new Configuration();
-               // Properties settings = getBuiltProperties("spring.demodb.datasource");
-
-                Properties settings = new Properties();
-                settings.put("spring.demodb.datasource.jdbcUrl", "jdbc:derby://172.17.0.2:1527/root/derbydemodb");
-                
-                settings.put("spring.demodb.datasource.username", "root");
-                settings.put("spring.demodb.datasource.password", "jj78mvpr52k1");
-                settings.put("spring.demodb.datasource.driver-class-name", "org.apache.derby.jdbc.ClientDriver");
-                
-                configuration.setProperties(settings);
-                configuration.addPackage("de.jgsoftware.webshop.model.demodb");
-              
-                StandardServiceRegistryBuilder serviceRegistry = new StandardServiceRegistryBuilder()
-                        .applySettings(settings);
-                sessionFactory = configuration.buildSessionFactory(serviceRegistry.build());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
+    
+	private static SessionFactory sessionFactory;
+	
+	private static SessionFactory buildSessionFactory() {
+        try {
+            // Create the SessionFactory from hibernate.cfg.xml
+        	Configuration configuration = new Configuration();
+        	configuration.configure("hibernate.cfg.xml");
+        	System.out.println("Hibernate Configuration loaded");
+        	
+        	ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+        	System.out.println("Hibernate serviceRegistry created");
+        	
+        	sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+        	
+            return sessionFactory;
+        }
+        catch (Throwable ex) {
+            System.err.println("Initial SessionFactory creation failed." + ex);
+            ex.printStackTrace();
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+	
+	public static SessionFactory getSessionFactory() {
+		if(sessionFactory == null) sessionFactory = buildSessionFactory();
         return sessionFactory;
     }
-
-
-    CriteriaBuilder getCriteriaBuilder() {
-        Session session = getSession();
-        tx = session.getTransaction();
-        if (!tx.isActive()) {
-            tx = session.beginTransaction();
-        }
-        return session.getCriteriaBuilder();
-    }
-
-    public <T> TypedQuery<T> query(CriteriaQuery<T> query) {
-        session = getSession();
-        tx = session.getTransaction();
-        if (!tx.isActive()) {
-            tx = session.beginTransaction();
-        }
-        var result = session.getEntityManagerFactory().createEntityManager().createQuery(query);
-        tx.commit();
-        return result;
+        
+  
+    
+    public Session openSession()
+    {
+        Session session = de.jgsoftware.webshop.config.Derbydb_Hiberante.getSessionFactory().openSession();
+        session.beginTransaction();
+        return session;
     }
 }
