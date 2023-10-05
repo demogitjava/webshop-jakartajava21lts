@@ -12,8 +12,6 @@ import org.springframework.stereotype.Component;
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 
