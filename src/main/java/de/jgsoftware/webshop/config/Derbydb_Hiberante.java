@@ -8,20 +8,19 @@ import org.hibernate.cfg.Configuration;
 //import org.reflections.Reflections;
 import org.springframework.stereotype.Component;
 
-import jakarta.persistence.Entity;
+
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Modifier;
 import java.util.Properties;
 
 
 @Component
 public class Derbydb_Hiberante {
 
-    SessionFactory sessionFactory = null;
+    SessionFactory sessionFactory;
     Session session;
     
     Transaction tx;
