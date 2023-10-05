@@ -14,7 +14,11 @@ public class MvcConfig implements WebMvcConfigurer
     @Autowired
     public AppConfigLocale appConfigLocale;
 
-
+    /**
+     *
+     * @param registry
+     */
+    @Override
     public void addViewControllers(ViewControllerRegistry registry)
     {
 
