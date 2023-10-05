@@ -22,7 +22,6 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 
-@Component
 public class Derbydb_Hiberante 
 {
 
