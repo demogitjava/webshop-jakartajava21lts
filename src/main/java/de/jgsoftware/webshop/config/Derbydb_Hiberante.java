@@ -27,15 +27,22 @@ public class Derbydb_Hiberante {
 
     public Session getSession() {
         this.session = createAndGetLocalSessionFactoryBean().getCurrentSession();
-        return session != null ? this.session : createAndGetLocalSessionFactoryBean().openSession();
+        return createAndGetLocalSessionFactoryBean().openSession();
     }
 
     SessionFactory createAndGetLocalSessionFactoryBean() {
         if (this.sessionFactory == null) {
             try {
                 Configuration configuration = new Configuration();
-                Properties settings = getBuiltProperties("spring.demodb.datasource");
+               // Properties settings = getBuiltProperties("spring.demodb.datasource");
 
+                Properties settings = new Properties();
+                settings.put("spring.demodb.datasource.jdbcUrl", "jdbc:derby://172.17.0.2:1527/root/derbydemodb");
+                
+                settings.put("spring.demodb.datasource.username", "root");
+                settings.put("spring.demodb.datasource.password", "jj78mvpr52k1");
+                settings.put("spring.demodb.datasource.driver-class-name", "org.apache.derby.jdbc.ClientDriver");
+                
                 configuration.setProperties(settings);
                 configuration.addPackage("de.jgsoftware.webshop.model.demodb");
               
@@ -49,17 +56,6 @@ public class Derbydb_Hiberante {
         return sessionFactory;
     }
 
-    private Properties getBuiltProperties(String propertyFileName) {
-        Properties properties = new Properties();
-        InputStream input = Derbydb_Hiberante.class
-                .getClassLoader().getResourceAsStream(propertyFileName);
-        try {
-            properties.load(input);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return properties;
-    }
 
     CriteriaBuilder getCriteriaBuilder() {
         Session session = getSession();
