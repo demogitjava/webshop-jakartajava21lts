@@ -24,15 +24,20 @@ public class DemoWebshop {
 
     public static void main(String[] args) 
     {
-     
+
     	/*
-    	 *  derby db
+    	 *  demo db
     	 */
         Derbydb_Hiberante derbydb = new Derbydb_Hiberante();
         derbydb.openSession();
         
+        /*
+    	 *  mawi db
+    	 */     
         Mawi_Hiberante mawidb = new Mawi_Hiberante();
         mawidb.openSession();
+        
+        
         
         SpringApplication.run(DemoWebshop.class, args);
 

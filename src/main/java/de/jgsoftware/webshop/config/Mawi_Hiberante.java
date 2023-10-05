@@ -8,8 +8,9 @@ import org.hibernate.cfg.Configuration;
 
 
 import org.hibernate.service.ServiceRegistry;
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class Mawi_Hiberante 
 {
 
