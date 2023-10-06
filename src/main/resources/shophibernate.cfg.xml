@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+      
+        <property name="hibernate.connection.url">jdbc:derby://172.17.0.2:1527/root/derbyshopdb</property>
+        <property name="hibernate.connection.username">root</property>
+          <property name="hibernate.connection.password">jj78mvpr52k1</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+        
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        
+        <!-- demoderbydb  -->
+        <mapping class="de.jgsoftwares.hql.model.shopdb.Authorities"/>
+        <mapping class="de.jgsoftwares.hql.model.shopdb.BootstrapComponents"/>
+        <mapping class="de.jgsoftwares.hql.model.shopdb.EngProduct"/>
+        <mapping class="de.jgsoftwares.hql.model.shopdb.Kundenstamm"/>
+        <mapping class="de.jgsoftwares.hql.model.shopdb.Leandercodes"/>
+        <mapping class="de.jgsoftwares.hql.model.shopdb.Products"/>
+        <mapping class="de.jgsoftwares.hql.model.shopdb.Products_Check_Out_Text"/>
+        <mapping class="de.jgsoftwares.hql.model.shopdb.Shoppingcart"/>
+        <mapping class="de.jgsoftwares.hql.model.shopdb.Sprachen"/>
+        <mapping class="de.jgsoftwares.hql.model.shopdb.Webtextlayout"/>
+             
+      
+    </session-factory>
+</hibernate-configuration>
