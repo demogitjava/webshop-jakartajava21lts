@@ -26,7 +26,7 @@ public class Derbydb_Hiberante
         try {
             // Create the SessionFactory from hibernate.cfg.xml
         	Configuration configuration = new Configuration();
-        	configuration.configure("mawihibernate.cfg.xml");
+        	configuration.configure("hibernate.cfg.xml");
         	System.out.println("Hibernate Configuration loaded");
         	
         	ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();

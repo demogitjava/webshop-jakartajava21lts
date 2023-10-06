@@ -15,10 +15,10 @@
         <property name="hibernate.show_sql">true</property>
         
         <!-- demoderbydb  -->
-        <mapping class="de.jgsoftwares.hql.model.mawi.Artikelstamm"/>
-        <mapping class="de.jgsoftwares.hql.model.mawi.Buchungsarten"/>
-        <mapping class="de.jgsoftwares.hql.model.mawi.Buchungsdaten"/>
-        <mapping class="de.jgsoftwares.hql.model.mawi.Belegarten"/>
+        <mapping class="de.jgsoftwares.model.mawi.Artikelstamm"/>
+        <mapping class="de.jgsoftwares.model.mawi.Buchungsarten"/>
+        <mapping class="de.jgsoftwares.model.mawi.Buchungsdaten"/>
+        <mapping class="de.jgsoftwares.model.mawi.Belegarten"/>
        
              
       

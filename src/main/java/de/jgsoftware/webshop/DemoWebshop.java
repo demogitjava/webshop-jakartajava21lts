@@ -2,6 +2,7 @@ package de.jgsoftware.webshop;
 
 import de.jgsoftware.webshop.config.Derbydb_Hiberante;
 import de.jgsoftware.webshop.config.Mawi_Hiberante;
+import de.jgsoftware.webshop.config.Shopdb_Hiberante;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -37,6 +38,8 @@ public class DemoWebshop {
         Mawi_Hiberante mawidb = new Mawi_Hiberante();
         mawidb.openSession();
         
+        Shopdb_Hiberante shopdb = new Shopdb_Hiberante();
+        shopdb.openSession();
         
         
         SpringApplication.run(DemoWebshop.class, args);

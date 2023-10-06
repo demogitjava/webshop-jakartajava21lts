@@ -26,7 +26,7 @@ public class Mawi_Hiberante
         try {
             // Create the SessionFactory from hibernate.cfg.xml
         	Configuration configuration = new Configuration();
-        	configuration.configure("hibernate.cfg.xml");
+        	configuration.configure("mawihibernate.cfg.xml");
         	System.out.println("Hibernate Configuration loaded");
         	
         	ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
@@ -52,7 +52,7 @@ public class Mawi_Hiberante
     
     public Session openSession()
     {
-        Session session = de.jgsoftware.webshop.config.Mawi_Hiberante.getSessionFactory().openSession();
+        Session session = de.jgsoftware.webshop.config.Derbydb_Hiberante.getSessionFactory().openSession();
         session.beginTransaction();
         return session;
     }
