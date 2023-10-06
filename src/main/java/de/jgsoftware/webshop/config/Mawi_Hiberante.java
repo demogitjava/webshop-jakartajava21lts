@@ -52,7 +52,7 @@ public class Mawi_Hiberante
     
     public Session openSession()
     {
-        Session session = de.jgsoftware.webshop.config.Derbydb_Hiberante.getSessionFactory().openSession();
+        Session session = de.jgsoftware.webshop.config.Mawi_Hiberante.getSessionFactory().openSession();
         session.beginTransaction();
         return session;
     }

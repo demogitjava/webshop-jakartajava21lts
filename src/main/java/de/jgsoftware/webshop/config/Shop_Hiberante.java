@@ -54,7 +54,7 @@ public class Shop_Hiberante
     
     public Session openSession()
     {
-        Session session = de.jgsoftware.webshop.config.Derbydb_Hiberante.getSessionFactory().openSession();
+        Session session = de.jgsoftware.webshop.config.Shop_Hiberante.getSessionFactory().openSession();
         session.beginTransaction();
         return session;
     }
