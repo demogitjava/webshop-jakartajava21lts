@@ -21,3 +21,6 @@ https://hub.docker.com/r/jgsoftwares/derbydbjava21
 ip on the docker image for connect is
 172.17.0.2
 for other network edit the ip in this files
+hibernate.cfg.xml
+mawihibernate.cfg.xml
+shophibernate.cfg.xml

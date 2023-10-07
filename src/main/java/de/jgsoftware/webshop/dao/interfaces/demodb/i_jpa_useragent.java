@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
  * @author hoscho
  */
 @Repository
-public interface i_jpa_useragent extends JpaRepository<Useragent, Integer>{
+public interface i_jpa_useragent extends JpaRepository<Useragent, Integer>
+{
     
 }

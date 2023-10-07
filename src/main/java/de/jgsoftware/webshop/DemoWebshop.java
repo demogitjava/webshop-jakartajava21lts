@@ -16,6 +16,7 @@ import java.sql.Timestamp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 /**
@@ -27,6 +28,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 @SpringBootApplication
 @EnableAutoConfiguration(
 exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+
 public class DemoWebshop 
 {
 	 public static String st_timezones = "Europe/Berlin";

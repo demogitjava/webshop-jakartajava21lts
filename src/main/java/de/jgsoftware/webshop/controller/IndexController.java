@@ -2,6 +2,7 @@ package de.jgsoftware.webshop.controller;
 
 import de.jgsoftware.webshop.controller.interfaces.i_indexcontroller;
 
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
@@ -33,8 +34,9 @@ public class IndexController implements i_indexcontroller {
     	
     	
         mv = new ModelAndView("index");
-        //Long usercountdemo = interfaceindexservice.getuseragentcount();
+       // Long usercountdemo = interfaceindexservice.getuseragentcount();
         //mv.addObject("Usercount", interfaceindexservice.getuseragentcount());
+       
         
         return null;
     }
