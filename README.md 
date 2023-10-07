@@ -2,6 +2,12 @@
 
 
 The TimeZone is set to GMT
+The application is started as servlet in headless mode 
+for edit the start method start the main method with
+
+SpringApplication.run(DemoWebshop.class, args);
+
+
 
 jdbc connection -> Hibernate Jakarta
 
