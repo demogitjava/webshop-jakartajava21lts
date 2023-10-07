@@ -2,6 +2,7 @@ package de.jgsoftware.webshop.config;
 
 import javax.sql.DataSource;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
@@ -20,16 +21,19 @@ public class SecurityConfig extends WebSecurityConfiguration
 
 	
 	    
+	  @Bean
+	  public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+	        http
+	            .authorizeHttpRequests()
+	                .requestMatchers("/**").permitAll()
+	                .anyRequest().authenticated()
+	                .and()
+	            .formLogin()
+	                .loginPage("/login")
+	                .permitAll()
+	                .and()
+	            .rememberMe();
 
-	    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-	        UserDetails user = User.withDefaultPasswordEncoder()
-	            .username("root	")
-	            .password("jj78mvpr52k1")
-	            .roles("USER")
-	            .build();
-	        auth.jdbcAuthentication()
-	            .withDefaultSchema()
-	            //.dataSource(dataSource())
-	            .withUser(user);
+	        return http.build();
 	    }
 }

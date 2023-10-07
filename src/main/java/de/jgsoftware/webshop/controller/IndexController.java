@@ -33,8 +33,8 @@ public class IndexController implements i_indexcontroller {
     	
     	
         mv = new ModelAndView("index");
-        Long usercountdemo = interfaceindexservice.getuseragentcount();
-        mv.addObject("Usercount", interfaceindexservice.getuseragentcount());
+        //Long usercountdemo = interfaceindexservice.getuseragentcount();
+        //mv.addObject("Usercount", interfaceindexservice.getuseragentcount());
         
         return null;
     }
