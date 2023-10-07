@@ -34,6 +34,10 @@ public class DemoWebshop
     public static void main(String[] args) 
     {
 
+    	
+    
+    	
+    	
     	/*
     	 *  demo db
     	 */
@@ -50,7 +54,9 @@ public class DemoWebshop
         shopdb.openSession();
         
         
-        //SpringApplication.run(DemoWebshop.class, args);
+        
+        
+        
         
         ZonedDateTime now = ZonedDateTime.now(ZoneId.of(st_timezones));
         //ZonedDateTime now = ZonedDateTime.now();
@@ -85,6 +91,21 @@ public class DemoWebshop
         }
         System.out.print(operationsytem + "\n");
 
+        
+        
+    	/*
+    	 * 
+    	 * to run the application in a container 
+    	 * edit main ->
+    	 * 
+    	 *  SpringApplication.run(DemoWebshop.class, args);
+    	 *  
+    	 */
+        
+        
+        /*
+         * 	run as servlet in headless mode
+         */
         SpringApplicationBuilder builder = new SpringApplicationBuilder(DemoWebshop.class);
         builder.web(WebApplicationType.SERVLET).headless(true).run();
 
