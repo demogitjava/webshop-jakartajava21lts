@@ -12,6 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import java.sql.Timestamp;
+
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
@@ -101,13 +103,13 @@ public class DemoWebshop
     	 *  SpringApplication.run(DemoWebshop.class, args);
     	 *  
     	 */
-        
+        SpringApplication.run(DemoWebshop.class, args);
         
         /*
          * 	run as servlet in headless mode
          */
-        SpringApplicationBuilder builder = new SpringApplicationBuilder(DemoWebshop.class);
-        builder.web(WebApplicationType.SERVLET).headless(true).run();
+       // SpringApplicationBuilder builder = new SpringApplicationBuilder(DemoWebshop.class);
+       // builder.web(WebApplicationType.SERVLET).headless(true).run();
 
     }
 }
