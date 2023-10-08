@@ -26,7 +26,9 @@ public class Derbydb_Hiberante
         try {
             // Create the SessionFactory from hibernate.cfg.xml
         	Configuration configuration = new Configuration();
-        	configuration.configure("hibernate.cfg.xml");
+                
+                // /root/git/webshop-jakartajava21lts/src/main/resources/hibernate.cfg.xml
+        	configuration.configure("/hibernate.cfg.xml");
         	System.out.println("Hibernate Configuration loaded");
         	
         	ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
