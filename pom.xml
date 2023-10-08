@@ -67,12 +67,11 @@
          
         </dependency> 
     
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <scope>compile</scope>
-        </dependency>
-
+       <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-jpa</artifactId>
+		    <version>3.0.4</version>
+		</dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
@@ -145,7 +144,11 @@
 		</dependency>
 		
 		
-
+<dependency>
+	<groupId>org.hibernate.orm</groupId>
+	<artifactId>hibernate-jpamodelgen</artifactId>
+	<version>6.3.1.Final</version>
+</dependency>
 	
 <!-- https://mvnrepository.com/artifact/jakarta.persistence/jakarta.persistence-api -->
 <dependency>
@@ -154,6 +157,8 @@
     <version>3.1.0</version>
 </dependency>
 
+
+
 <!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
 <dependency>
     <groupId>org.reflections</groupId>
@@ -161,6 +166,12 @@
     <version>0.10.2</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+<dependency>
+    <groupId>com.zaxxer</groupId>
+    <artifactId>HikariCP</artifactId>
+    <version>5.0.1</version>
+</dependency>
 
 
 
