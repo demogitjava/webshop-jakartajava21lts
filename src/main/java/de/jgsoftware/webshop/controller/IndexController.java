@@ -38,7 +38,7 @@ public class IndexController implements i_indexcontroller {
         //mv.addObject("Usercount", interfaceindexservice.getuseragentcount());
        
         
-        return null;
+        return mv;
     }
     
 }
