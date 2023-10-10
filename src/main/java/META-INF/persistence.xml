@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="derbydemodb">
+        <class>de.jgsoftwares.webshop.model.demodb.Desktoplayout</class>
+        <class>de.jgsoftwares.webshop.model.demodb.Kundenstamm</class>
+        <class>de.jgsoftwares.webshop.model.demodb.Reports</class>
+        <class>de.jgsoftwares.webshop.model.demodb.Sprachen</class>
+        <class>de.jgsoftwares.webshop.model.demodb.Useragent</class>
+        <class>de.jgsoftwares.webshop.model.demodb.Userdata</class>
+        <class>de.jgsoftwares.webshop.model.demodb.Userdetail</class>
+        <class>de.jgsoftwares.webshop.model.demodb.Users</class>
+        <class>de.jgsoftwares.webshop.model.demodb.Webtextlayout</class>
+        <class>de.jgsoftwares.webshop.model.demodb.Yourcompanydata</class>
+      
+            
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:derby://172.17.0.2:1527/root/derbyshopdb"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="jj78mvpr52k1"/>
+           
+        </properties>
+    </persistence-unit>
+</persistence>
