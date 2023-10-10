@@ -7,10 +7,12 @@ import jakarta.persistence.Id;
 import java.security.Timestamp;
 import java.util.Date;
 import de.jgsoftware.webshop.model.demodb.interfaces.i_model_useragent;
+
 /**
  *
  * @author hoscho 
  */
+
 @Entity
 public class Useragent implements i_model_useragent
 {
