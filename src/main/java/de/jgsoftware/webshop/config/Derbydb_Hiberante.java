@@ -12,6 +12,8 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 
 
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 
 @Component
 public class Derbydb_Hiberante 
@@ -26,7 +28,7 @@ public class Derbydb_Hiberante
 	
 	public Derbydb_Hiberante()
 	{
-		 
+       
 	}
 
 	
