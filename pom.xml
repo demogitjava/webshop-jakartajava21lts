@@ -40,223 +40,215 @@
 
     <dependencies>
 
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-core</artifactId>
-    <version>6.0.12</version>
-</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-core</artifactId>
+			    <version>6.0.12</version>
+			</dependency>
 
-      
-      <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-web</artifactId>
-    <version>6.0.12</version>
-</dependency>
+		      
+		    <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+			<dependency>
+				 <groupId>org.springframework</groupId>
+				 <artifactId>spring-web</artifactId>
+				 <version>6.0.12</version>
+			</dependency>
 
         
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure</artifactId>
-            <type>jar</type>
-        </dependency>
+	        <dependency>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-autoconfigure</artifactId>
+	            <type>jar</type>
+	        </dependency>
         
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <!-- <exclusions>
-            <exclusion>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-tomcat</artifactId>
-            </exclusion>
-           </exclusions> -->
-         
-        </dependency> 
+	        <dependency>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-starter-web</artifactId>
+	            <!-- <exclusions>
+	            <exclusion>
+	                <groupId>org.springframework.boot</groupId>
+	                <artifactId>spring-boot-starter-tomcat</artifactId>
+	            </exclusion>
+	           </exclusions> -->
+	         
+	        </dependency> 
     
-       <dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-data-jpa</artifactId>
-		    <version>3.0.4</version>
-		</dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-            <scope>compile</scope>
-        </dependency>
+	       <dependency>
+			    <groupId>org.springframework.boot</groupId>
+			    <artifactId>spring-boot-starter-data-jpa</artifactId>
+			    <version>3.0.4</version>
+			</dependency>
+	        <dependency>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-starter-security</artifactId>
+	            <scope>compile</scope>
+	        </dependency>
+	
+	        <dependency>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+	        </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-
-
-        
-    
+	        <dependency>
+	            <groupId>org.springframework</groupId>
+	            <artifactId>spring-webmvc</artifactId>
+	            <version>6.0.12</version>
+	            <type>jar</type>
+	        </dependency>
        
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>6.0.12</version>
-            <type>jar</type>
-        </dependency>
-        
- 
-  
-
-        <!-- exclude tomcat jdbc connection pool, use HikariCP -->
-<dependency>
-   <groupId>org.springframework.boot</groupId>
-   <artifactId>spring-boot-starter-jdbc</artifactId>
-
-</dependency>
+       		<!-- exclude tomcat jdbc connection pool, use HikariCP -->
+			<dependency>
+			   <groupId>org.springframework.boot</groupId>
+			   <artifactId>spring-boot-starter-jdbc</artifactId>
+			
+			</dependency>
         
        
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-jdk14 -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-jdk14</artifactId>
-            <version>2.0.0-alpha0</version>
-        </dependency>  
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derby</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-       <!-- https://mvnrepository.com/artifact/org.apache.derby/derbyclient -->
-<dependency>
-    <groupId>org.apache.derby</groupId>
-    <artifactId>derbyclient</artifactId>
-    <version>10.16.1.1</version>
-</dependency>
+	        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-jdk14 -->
+	        <dependency>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-jdk14</artifactId>
+	            <version>2.0.0-alpha0</version>
+	        </dependency>  
+	        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+	        <dependency>
+	            <groupId>org.springframework</groupId>
+	            <artifactId>spring-aop</artifactId>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.apache.derby</groupId>
+	            <artifactId>derby</artifactId>
+	            <scope>runtime</scope>
+	        </dependency>
+       
+       		<!-- https://mvnrepository.com/artifact/org.apache.derby/derbyclient -->
+			<dependency>
+			    <groupId>org.apache.derby</groupId>
+			    <artifactId>derbyclient</artifactId>
+			    <version>10.16.1.1</version>
+			</dependency>
 
+	        <!-- https://mvnrepository.com/artifact/org.apache.derby/derbynet -->
+	        <dependency>
+	            <groupId>org.apache.derby</groupId>
+	            <artifactId>derbynet</artifactId>
+	        </dependency>
+	        
+	
+			<dependency>
+			    <groupId>org.hibernate</groupId>
+			    <artifactId>hibernate-core-jakarta</artifactId>
+			    <version>5.5.0.Final</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+			<dependency>
+			    <groupId>org.hibernate</groupId>
+			    <artifactId>hibernate-c3p0</artifactId>
+			    <version>5.5.0.Final</version>
+			</dependency>
 
-
-        <!-- https://mvnrepository.com/artifact/org.apache.derby/derbynet -->
-        <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derbynet</artifactId>
-        </dependency>
-        
-
-		<dependency>
-		    <groupId>org.hibernate</groupId>
-		    <artifactId>hibernate-core-jakarta</artifactId>
-		    <version>5.5.0.Final</version>
-		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
-		<dependency>
-		    <groupId>org.hibernate</groupId>
-		    <artifactId>hibernate-c3p0</artifactId>
-		    <version>5.5.0.Final</version>
-		</dependency>
-
-		
-		<dependency>
-		    <groupId>org.hibernate</groupId>
-		    <artifactId>hibernate-entitymanager</artifactId>
-		    <version>5.5.0.Final</version>
-		</dependency>
 		
 			<dependency>
-		    <groupId>org.hibernate</groupId>
-		    <artifactId>hibernate-jpamodelgen-jakarta</artifactId>
-		    <version>5.5.0.Final</version>
-		</dependency>
-		
-		 <dependency>
-            <groupId>jakarta.validation</groupId>
-            <artifactId>jakarta.validation-api</artifactId>
-            <version>3.0.2</version>
-        </dependency>
+			    <groupId>org.hibernate</groupId>
+			    <artifactId>hibernate-entitymanager</artifactId>
+			    <version>5.5.0.Final</version>
+			</dependency>
+			
+				<dependency>
+			    <groupId>org.hibernate</groupId>
+			    <artifactId>hibernate-jpamodelgen-jakarta</artifactId>
+			    <version>5.5.0.Final</version>
+			</dependency>
+			
+			 <dependency>
+	            <groupId>jakarta.validation</groupId>
+	            <artifactId>jakarta.validation-api</artifactId>
+	            <version>3.0.2</version>
+	        </dependency>
         
-        <dependency>
-			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>eclipselink</artifactId>
-			<version>3.0.0-RC1</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.eclipse.persistence</groupId>
-					<artifactId>commonj.sdo</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+	        <dependency>
+				<groupId>org.eclipse.persistence</groupId>
+				<artifactId>eclipselink</artifactId>
+				<version>3.0.0-RC1</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.eclipse.persistence</groupId>
+						<artifactId>commonj.sdo</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 
-
-<!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
-<dependency>
-    <groupId>org.reflections</groupId>
-    <artifactId>reflections</artifactId>
-    <version>0.10.2</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
-<dependency>
-    <groupId>com.zaxxer</groupId>
-    <artifactId>HikariCP</artifactId>
-    <version>5.0.1</version>
-</dependency>
-
-
-    <dependency>
-      <groupId>jakarta.platform</groupId>
-      <artifactId>jakarta.jakartaee-api</artifactId>
-      <version>10.0.0</version>
-    </dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.ejb/jakarta.ejb-api -->
-<dependency>
-    <groupId>jakarta.ejb</groupId>
-    <artifactId>jakarta.ejb-api</artifactId>
-    <version>4.0.1</version>
-</dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.core</artifactId>
-            <version>2.7.12</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.asm</artifactId>
-            <version>9.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.antlr</artifactId>
-            <version>2.7.12</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa</artifactId>
-            <version>2.7.12</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.jpql</artifactId>
-            <version>2.7.12</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.moxy</artifactId>
-            <version>2.7.12</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>jakarta.persistence</artifactId>
-            <version>2.2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>2.7.12</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
+			
+			<!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
+			<dependency>
+			    <groupId>org.reflections</groupId>
+			    <artifactId>reflections</artifactId>
+			    <version>0.10.2</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+			<dependency>
+			    <groupId>com.zaxxer</groupId>
+			    <artifactId>HikariCP</artifactId>
+			    <version>5.0.1</version>
+			</dependency>
+			
+			
+			<dependency>
+			    <groupId>jakarta.platform</groupId>
+			    <artifactId>jakarta.jakartaee-api</artifactId>
+			    <version>10.0.0</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/jakarta.ejb/jakarta.ejb-api -->
+			<dependency>
+			    <groupId>jakarta.ejb</groupId>
+			    <artifactId>jakarta.ejb-api</artifactId>
+			    <version>4.0.1</version>
+			</dependency>
+	        <dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>org.eclipse.persistence.core</artifactId>
+	            <version>2.7.12</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>org.eclipse.persistence.asm</artifactId>
+	            <version>9.4.0</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>org.eclipse.persistence.antlr</artifactId>
+	            <version>2.7.12</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>org.eclipse.persistence.jpa</artifactId>
+	            <version>2.7.12</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>org.eclipse.persistence.jpa.jpql</artifactId>
+	            <version>2.7.12</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>org.eclipse.persistence.moxy</artifactId>
+	            <version>2.7.12</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>jakarta.persistence</artifactId>
+	            <version>2.2.3</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+	            <version>2.7.12</version>
+	            <scope>provided</scope>
+	        </dependency>
+	    </dependencies>
 
     <build>
         <plugins>
@@ -309,11 +301,6 @@
                     <debug>false</debug>
                 </configuration>
             </plugin>
-            
-            
-         
-   
-
 
         </plugins>
     </build>
