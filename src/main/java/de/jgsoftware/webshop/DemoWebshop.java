@@ -30,6 +30,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableAutoConfiguration(
 exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 @EnableTransactionManagement
+@EnableJpaRepositories(basePackages = "de.jgsoftware.webshop.dao.interfaces") 
+
 public class DemoWebshop 
 {
 	 public static String st_timezones = "Europe/Berlin";
