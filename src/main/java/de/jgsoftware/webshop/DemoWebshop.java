@@ -16,8 +16,13 @@ import java.sql.Timestamp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import ch.qos.logback.core.Context;
 
 
 /**
@@ -27,8 +32,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @SpringBootApplication
-@EnableAutoConfiguration(
-exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+//@EnableAutoConfiguration(
+//exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "de.jgsoftware.webshop.dao.interfaces") 
 
@@ -36,6 +41,9 @@ public class DemoWebshop
 {
 	 public static String st_timezones = "Europe/Berlin";
 	 public static String operationsytem = null;
+	
+	 
+	 
 	
 
     public static void main(String[] args) 
