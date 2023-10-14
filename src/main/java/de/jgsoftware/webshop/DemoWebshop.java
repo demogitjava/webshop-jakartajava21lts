@@ -30,8 +30,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 //@EnableAutoConfiguration(
 //exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
-@EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "de.jgsoftware.webshop.dao.interfaces") 
+
 
 public class DemoWebshop 
 {
