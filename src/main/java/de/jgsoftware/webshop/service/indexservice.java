@@ -17,6 +17,8 @@ public class indexservice implements i_indexservice
     @Autowired
     i_daoindex idaoindex;
     
+    
+    @Autowired
     i_jpa_useragent ijpauseragentdemodb;
     
     
