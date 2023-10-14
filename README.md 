@@ -1,6 +1,17 @@
 # Demo Webshop with Spring Boot + Thymeleaf + Bootstrap/Bootflat ui kit
 
 
+ 
+spring boot hibernate/jpa is loaded the persistence.xml with name "default"
+for web and security config,
+the other connections are over hibernate session with the config files 
+from hibernate.cfg.xml usw. 
+
+
+
+
+
+
 The TimeZone is set to GMT
 The application is started as servlet in headless mode 
 for edit the start method start the main method with
