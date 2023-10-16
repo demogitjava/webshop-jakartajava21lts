@@ -23,10 +23,9 @@
         <spring-boot.run.jvmArguments>-Duser.timezone=GMT</spring-boot.run.jvmArguments>
         <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
         <project.reporting.outputEncoding>ISO-8859-1</project.reporting.outputEncoding>
-    
-        
+            
         <maven.compiler.release>21</maven.compiler.release>
-	<compiler-plugin.version>3.11.0</compiler-plugin.version>
+	    <compiler-plugin.version>3.11.0</compiler-plugin.version>
     </properties>
 
 
