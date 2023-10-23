@@ -60,6 +60,10 @@ public class DemoWebshop
         Mawi_Hiberante mawidb = new Mawi_Hiberante();
         mawidb.openSession();
         
+        
+        /*
+         *  shop db
+         */
         Shop_Hiberante shopdb = new Shop_Hiberante();
         shopdb.openSession();
         
