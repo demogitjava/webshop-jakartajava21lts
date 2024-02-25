@@ -70,8 +70,8 @@ public class DemoWebshop
         ZonedDateTime now = ZonedDateTime.now(ZoneId.of(st_timezones));
         //ZonedDateTime now = ZonedDateTime.now();
 
-        // set up to GMT
-        now.withZoneSameInstant( ZoneId.of("GMT") )
+        // set up to UTC
+        now.withZoneSameInstant( ZoneId.of("UTC") )
                 .format( DateTimeFormatter.ISO_OFFSET_DATE_TIME );
         // 1. ZonedDateTime to TimeStamp
         Timestamp timestamp = Timestamp.valueOf(now.toLocalDateTime());
